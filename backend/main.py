@@ -19,10 +19,7 @@ def get_db():
     finally:
         db.close()
 
-# Hugging Face API setup
-HF_API_URL = "https://api-inference.huggingface.co/models/gpt2"  # or another free model
-HF_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
-headers = {"Authorization": f"Bearer {HF_API_KEY}"}
+
 
 def get_hf_response(prompt: str):
     payload = {"inputs": prompt}
